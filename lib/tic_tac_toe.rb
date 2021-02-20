@@ -86,11 +86,8 @@ def winner
   end
 end
 
-def play
-  turn until over?
-  if won?
-    puts "Congratulations #{winner}!"
-  elsif draw?
-    puts "Cat's Game!"
+ def play
+    turn until over?
+    puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
   end
 end
